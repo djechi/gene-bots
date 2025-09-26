@@ -10,9 +10,47 @@ be transferred to their children. This process will continue until the program i
 the evolution and increased survival of the robots through generations.
 
 ## Key Features
-- Robot Sensors: 4 sensors detect adjacent squares/New maps will generate a different code for the sensor/Sensor states include no object, wall object, battery object, and ignore what is there
-- Robot Genes: 16 genes for each robot/Each gene is an array with 5 codes/4 Robot actions/Every turn, the robot compares the current sensor state with its genetic code to find a match
-- Map: Robot placed in random spot/populate 40% of squares with batteries/Make a new map for each robot/Each square consumes 1 unit/Invalid moves consume energy but keep robot stationary
-- Population: 200 randomly generated robots at start/Count the number of turns they survive
-- Robot Reproduction: Record total energy harvested by entire generation and breed robots/Sort population by energy harvested
-- Genetic Algorithms: Fitness is the total amount of power harvested when each robot's time ends/Calculate the average fitness score for the whole population/Save average fitness for each generation/Print out average fitness scores
+
+### Robot Specifications
+Sensors: 4 directional sensors (North, South, East, West) detecting adjacent squares
+
+Sensor States: Empty, Wall, Battery, or Ignore
+
+Genes: 16 genes per robot, each containing 5 codes (4 sensor states + 1 action)
+
+Actions: Move North, South, East, West, or Random direction
+
+### Environment
+Grid: 10x10 navigation area with boundary walls
+
+Batteries: 40% of squares randomly populated with energy sources
+
+Energy System: Start with 5 units, -1 per move, +5 per battery collected
+
+Map Generation: Unique random map for each robot evaluation
+
+### Genetic Algorithm
+Population: 200 robots per generation
+
+Fitness: Total batteries collected during lifespan
+
+Selection: Top 50% survive and reproduce
+
+Crossover: Two parents produce two children with combined genes
+
+Mutation: 5% chance per gene to introduce random changes
+
+Evolution: Continuous improvement over generations
+
+### Simulation Process
+Initialization: Create 200 robots with random genes
+
+Evaluation: Each robot navigates its own random map until energy depletion
+
+Selection: Rank robots by batteries collected, keep the top 100
+
+Reproduction: Breed survivors to repopulate to 200 robots
+
+Iteration: Repeat the process for a specified number of generations
+
+Analysis: Track and display average fitness scores per generation

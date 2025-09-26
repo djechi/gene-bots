@@ -12,45 +12,29 @@ the evolution and increased survival of the robots through generations.
 ## Key Features
 
 ### Robot Specifications
-Sensors: 4 directional sensors (North, South, East, West) detecting adjacent squares
-
-Sensor States: Empty, Wall, Battery, or Ignore
-
-Genes: 16 genes per robot, each containing 5 codes (4 sensor states + 1 action)
-
-Actions: Move North, South, East, West, or Random direction
+- Sensors: 4 directional sensors (North, South, East, West) detecting adjacent squares
+- Sensor States: Empty, Wall, Battery, or Ignore
+- Genes: 16 genes per robot, each containing 5 codes (4 sensor states + 1 action)
+- Actions: Move North, South, East, West, or Random direction
 
 ### Environment
-Grid: 10x10 navigation area with boundary walls
-
-Batteries: 40% of squares randomly populated with energy sources
-
-Energy System: Start with 5 units, -1 per move, +5 per battery collected
-
-Map Generation: Unique random map for each robot evaluation
+- Grid: 10x10 navigation area with boundary walls
+- Batteries: 40% of squares randomly populated with energy sources
+- Energy System: Start with 5 units, -1 per move, +5 per battery collected
+- Map Generation: Unique random map for each robot evaluation
 
 ### Genetic Algorithm
-Population: 200 robots per generation
-
-Fitness: Total batteries collected during lifespan
-
-Selection: Top 50% survive and reproduce
-
-Crossover: Two parents produce two children with combined genes
-
-Mutation: 5% chance per gene to introduce random changes
-
-Evolution: Continuous improvement over generations
+- Population: 200 robots per generation
+- Fitness: Total batteries collected during lifespan
+- Selection: Top 50% survive and reproduce
+- Crossover: Two parents produce two children with combined genes
+- Mutation: 5% chance per gene to introduce random changes
+- Evolution: Continuous improvement over generations
 
 ### Simulation Process
-Initialization: Create 200 robots with random genes
-
-Evaluation: Each robot navigates its own random map until energy depletion
-
-Selection: Rank robots by batteries collected, keep the top 100
-
-Reproduction: Breed survivors to repopulate to 200 robots
-
-Iteration: Repeat the process for a specified number of generations
-
-Analysis: Track and display average fitness scores per generation
+- Initialization: Create 200 robots with random genes
+- Evaluation: Each robot navigates its own random map until energy depletion
+- Selection: Rank robots by batteries collected, keep the top 100
+- Reproduction: Breed survivors to repopulate to 200 robots
+- Iteration: Repeat the process for a specified number of generations
+- Analysis: Track and display average fitness scores per generation
